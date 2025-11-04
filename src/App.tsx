@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter  as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useTelegram } from './hooks/useTelegram.js';
 import './styles/globals.css';
 import Telegram from "@/Telegram.tsx";
