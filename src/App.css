@@ -1,0 +1,106 @@
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* предотвращает горизонтальную прокрутку из‑за отступов */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Loading state */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.loader {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Error banner */
+.error-banner {
+    background: #ff6b6b;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Demo card */
+.demo-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.app.dark .demo-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.demo-card h2 {
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+}
+
+/* Browser info */
+.browser-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app.dark .browser-info {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.browser-info h2 {
+    margin-bottom: 1.5rem;
+    color: #17a2b8;
+}
+
+.browser-info ol {
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.browser-info li {
+    margin-bottom: 0.5rem;
+}
+
+/* Outline button */
+.btn-outline {
+    background: transparent;
+    border: 2px solid #0088cc;
+    color: #0088cc;
+}
+
+.app.dark .btn-outline {
+    border-color: #00c6ff;
+    color: #00c6ff;
+}
+
+.btn-outline:hover {
+    background: #0088cc;
+    color: white;
+}
+
+.app.dark .btn-outline:hover {
+    background: #00c6ff;
+    color: #333;
+}
