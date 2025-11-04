@@ -38,7 +38,7 @@ const Telegram = () => {
     // Обработка перехода на админку
     useEffect(() => {
         if (activeTab === 'admin' && !location.pathname.startsWith('/admin')) {
-            navigate('/admin/login');
+            navigate('/admin');
         }
     }, [activeTab, navigate, location.pathname]);
 
@@ -46,7 +46,7 @@ const Telegram = () => {
         setActiveTab(tab);
 
         if (tab === 'admin') {
-            navigate('/admin/login');
+            navigate('/admin');
         } else if (tab === 'dashboard') {
             navigate('/');
         } else {
@@ -68,15 +68,16 @@ const Telegram = () => {
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/news" element={<News />} />
+                <Route path="/admin/*" element={<AdminDashboard />} />
 
                 {/* Админские маршруты */}
-                <Route path="/admin/login" element={<AdminLogin />} />
-                <Route
-                    path="/admin/*"
-                    element={
-                        true ? <AdminDashboard /> : <AdminLogin />
-                    }
-                />
+                {/*<Route path="/admin/login" element={<AdminLogin />} />*/}
+                {/*<Route*/}
+                {/*    path="/admin/*"*/}
+                {/*    element={*/}
+                {/*        true ? <AdminDashboard /> : <AdminLogin />*/}
+                {/*    }*/}
+                {/*/>*/}
             </Routes>
         </Layout>
     );
