@@ -11,9 +11,9 @@ function App() {
     // const { isAdmin, isLoading } = useAuth();
 
     // Если в Telegram - показываем основное приложение
-    // if (isTelegram) {
-    //     return <Telegram />;
-    // }
+    if (isTelegram) {
+        return <Telegram />;
+    }
 
     // В браузере - показываем админку или основное приложение
     return (
