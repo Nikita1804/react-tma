@@ -1,42 +1,40 @@
-import React, { useState } from 'react';
-import { useTelegram } from './hooks/useTelegram';
-import Layout from './components/Layout/Layout';
-import Dashboard from './pages/Dashboard';
-import Content from './pages/Content';
-import Courses from './pages/Courses';
-import Team from './pages/Team';
-import News from './pages/News';
+
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useTelegram } from './hooks/useTelegram.js';
 import './styles/globals.css';
+import Telegram from "@/Telegram.tsx";
+import AdminLogin from "@/admin/pages/AdminLogin.tsx";
+import AdminDashboard from "@/admin/pages/AdminDashboard.tsx";
 
 function App() {
-    const { user } = useTelegram();
-    const [activeTab, setActiveTab] = useState('dashboard');
+    const { isTelegram } = useTelegram();
+    // const { isAdmin, isLoading } = useAuth();
 
-    const renderContent = () => {
-        switch (activeTab) {
-            case 'dashboard':
-                return <Dashboard />;
-            case 'content':
-                return <Content />;
-            case 'courses':
-                return <Courses />;
-            case 'team':
-                return <Team />;
-            case 'news':
-                return <News />;
-            default:
-                return <Dashboard />;
-        }
-    };
+    // Если в Telegram - показываем основное приложение
+    // if (isTelegram) {
+    //     return <Telegram />;
+    // }
 
+    // В браузере - показываем админку или основное приложение
     return (
-        <Layout
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            user={user}
-        >
-            {renderContent()}
-        </Layout>
+        <Router>
+            <Routes>
+                {/* Админские маршруты*/}
+                {/*<Route*/}
+                {/*    path="/admin/login"*/}
+                {/*    element={<AdminLogin />}*/}
+                {/*/>*/}
+                {/*<Route*/}
+                {/*    path="/admin/*"*/}
+                {/*    element={*/}
+                {/*        true ? <AdminDashboard /> : <Navigate to="/admin/login" />*/}
+                {/*    }*/}
+                {/*/>*/}
+
+                {/* Основное приложение для пользователей */}
+                <Route path="/*" element={<Telegram />} />
+            </Routes>
+        </Router>
     );
 }
 

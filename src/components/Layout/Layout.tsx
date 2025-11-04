@@ -1,10 +1,10 @@
 import Header from './Header';
 import BottomNavigation from './BottomNavigation';
 
-const Layout = ({ children, activeTab, onTabChange, user }) => {
+const Layout = ({ children, activeTab, onTabChange }: any) => {
     return (
         <div style={{ minHeight: '100vh', background: 'var(--bg-light)' }}>
-            <Header user={user} />
+            <Header />
             <main className="main-content">
                 {children}
             </main>

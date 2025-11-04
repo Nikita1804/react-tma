@@ -1,4 +1,3 @@
-import React from 'react';
 import { PlayCircle, Download, BookOpen } from 'lucide-react';
 
 const Content = () => {

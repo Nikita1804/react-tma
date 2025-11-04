@@ -1,12 +1,13 @@
-import { Home, PlayCircle, BookOpen, Users, Newspaper } from 'lucide-react';
+import { Home, PlayCircle, BookOpen, Users, Newspaper, Magnet } from 'lucide-react';
 
-const BottomNavigation = ({ activeTab, onTabChange }) => {
+const BottomNavigation = ({ activeTab, onTabChange }: any) => {
     const tabs = [
         { id: 'dashboard', label: 'Главная', icon: Home },
         { id: 'content', label: 'Обучение', icon: PlayCircle },
         { id: 'courses', label: 'Курсы', icon: BookOpen },
         { id: 'team', label: 'Команда', icon: Users },
-        { id: 'news', label: 'Новости', icon: Newspaper }
+        { id: 'news', label: 'Новости', icon: Newspaper },
+        { id: 'admin', label: 'Admin', icon: Magnet }
     ];
 
     return (

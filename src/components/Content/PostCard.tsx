@@ -1,8 +1,7 @@
-import React from 'react';
 import { Calendar, Eye } from 'lucide-react';
 
-const PostCard = ({ post }) => {
-    const getTypeColor = (type) => {
+const PostCard = ({ post }: any) => {
+    const getTypeColor = (type: any) => {
         const colors = {
             article: 'var(--primary-color)',
             video: 'var(--secondary-color)',
@@ -10,7 +9,8 @@ const PostCard = ({ post }) => {
             webinar: 'var(--warning-color)',
             update: 'var(--primary-dark)'
         };
-        return colors[type] || 'var(--primary-color)';
+        // @ts-ignore
+        return colors[type]  || 'var(--primary-color)';
     };
 
     return (

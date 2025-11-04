@@ -1,4 +1,4 @@
-const StatsCard = ({ title, value, subtitle, trend, icon: Icon }) => {
+const StatsCard = ({ title, value, subtitle, trend, icon: Icon }: any) => {
     return (
         <div className="card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>

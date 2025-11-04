@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, Clock, Users } from 'lucide-react';
 
 const Courses = () => {

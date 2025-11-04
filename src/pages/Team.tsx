@@ -1,4 +1,3 @@
-import React from 'react';
 import { Share2, Users, TrendingUp, Award } from 'lucide-react';
 
 const Team = () => {
