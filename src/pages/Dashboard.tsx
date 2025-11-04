@@ -39,7 +39,7 @@ const Dashboard = () => {
                     />
                     <StatsCard
                         title="Команда"
-                        value="24"
+                        value="25"
                         subtitle="участников"
                         trend={8}
                         icon={Users}
