@@ -5,19 +5,19 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/reactjs-template/',
-  base: './',
+  base: '/reactjs-template/',
+  // base: './',
     build: {
         outDir: 'dist',
         assetsDir: 'assets'
     },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern',
-      },
+    css: {
+        modules: {
+            // Генерация понятных имен классов в dev режиме
+            localsConvention: 'camelCase',
+            generateScopedName: '[name]__[local]___[hash:base64:5]'
+        }
     },
-  },
   plugins: [
     // Allows using React dev server along with building a React application with Vite.
     // https://npmjs.com/package/@vitejs/plugin-react-swc

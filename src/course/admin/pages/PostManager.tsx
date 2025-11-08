@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2, Search } from 'lucide-react';
-import PostForm from '../components/PostForm';
-import { Post } from '@/types';
+import PostForm from '../components/PostForm.tsx';
+import { Post } from '@/course/types';
 
 const PostManager: React.FC = () => {
     const [posts, setPosts] = useState<Post[]>([]);

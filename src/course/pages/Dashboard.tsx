@@ -1,7 +1,7 @@
 import { DollarSign, Users, Video, BookOpen } from 'lucide-react';
-import HeroSection from '../components/Dashboard/HeroSection';
-import StatsCard from '../components/Dashboard/StatsCard';
-import PostCard from '../components/Content/PostCard';
+import HeroSection from '../components/Dashboard/HeroSection.tsx';
+import StatsCard from '../components/Dashboard/StatsCard.tsx';
+import PostCard from '../components/Content/PostCard.tsx';
 
 const Dashboard = () => {
     const latestPosts = [

@@ -1,0 +1,185 @@
+/* Базовые стили блоков */
+.block {
+    border: 1px dashed transparent;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.block:hover {
+    border-color: #007acc;
+}
+
+.block.selected {
+    border-color: #007acc;
+    border-style: solid;
+}
+
+.block.dragging {
+    opacity: 0.5;
+}
+
+/* Текстовый блок */
+.text-block {
+    padding: 10px;
+    background: transparent;
+    font-size: 14px;
+}
+
+/* Блок с изображением */
+.image-block {
+    padding: 10px;
+    background: transparent;
+}
+
+.image-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Контактный блок */
+.contact-block {
+    padding: 10px;
+    background: transparent;
+    font-size: 14px;
+}
+
+/* Контейнерный блок */
+.container-block {
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px dashed #ccc;
+    min-height: 100px;
+}
+
+.container-block:hover {
+    border-color: #007acc;
+}
+
+.container-block.selected {
+    border-color: #007acc;
+    border-style: solid;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+}
+
+.container-children {
+    margin-top: 10px;
+    min-height: 50px;
+    position: relative;
+}
+
+.container-placeholder {
+    color: #6c757d;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Кнопки внутри контейнера */
+.container-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.container-btn:hover {
+    opacity: 0.9;
+}
+
+.container-btn.blue {
+    background: #17a2b8;
+}
+
+/* Дерево блоков */
+.block-tree {
+    font-size: 12px;
+}
+
+.block-tree-item {
+    padding: 8px;
+    margin: 2px 0;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.block-tree-item.selected {
+    background: #e3f2fd;
+}
+
+.block-tree-item:hover {
+    background: #f8f9fa;
+}
+
+/* Преview сайта */
+.site-preview {
+    width: 100%;
+    max-width: 800px;
+    min-height: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.site-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Настройки блока */
+.block-settings {
+    margin-bottom: 16px;
+}
+
+.block-settings h3 {
+    margin-bottom: 16px;
+}
+
+.block-settings h4 {
+    margin: 16px 0 8px 0;
+}
+
+.block-settings label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.style-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.style-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.style-row label {
+    min-width: 100px;
+    margin-bottom: 0;
+}
+
+.child-blocks-controls {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}

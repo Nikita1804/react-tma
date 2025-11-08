@@ -6,7 +6,7 @@ import {
     BarChart3,
     LogOut,
 } from 'lucide-react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../hooks/useAuth.tsx';
 
 const AdminLayout = () => {
     const location = useLocation();

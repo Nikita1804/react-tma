@@ -1,10 +1,10 @@
 
 import { HashRouter  as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useTelegram } from './hooks/useTelegram.js';
-import './styles/globals.css';
-import Telegram from "@/Telegram.tsx";
-import AdminLogin from "@/admin/pages/AdminLogin.tsx";
-import AdminDashboard from "@/admin/pages/AdminDashboard.tsx";
+import '@/course/styles/globals.css';
+import Telegram from "@/course/Telegram.tsx";
+import AdminLogin from "@/course/admin/pages/AdminLogin.tsx";
+import AdminDashboard from "@/course/admin/pages/AdminDashboard.tsx";
 
 function App() {
     const { isTelegram } = useTelegram();

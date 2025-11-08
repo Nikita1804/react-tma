@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 // @ts-ignore
 import { useTelegram } from './hooks/useTelegram.js';
-import Layout from './components/Layout/Layout';
-import Dashboard from './pages/Dashboard';
-import Content from './pages/Content';
-import Courses from './pages/Courses';
-import Team from './pages/Team';
-import News from './pages/News';
-import './styles/globals.css';
+import Layout from './components/Layout/Layout.tsx';
+import Dashboard from './pages/Dashboard.tsx';
+import Content from './pages/Content.tsx';
+import Courses from './pages/Courses.tsx';
+import Team from './pages/Team.tsx';
+import News from './pages/News.tsx';
+import '@/course/styles/globals.css';
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import AdminLogin from "@/admin/pages/AdminLogin.tsx";
-import AdminDashboard from "@/admin/pages/AdminDashboard.tsx";
+import AdminLogin from "@/course/admin/pages/AdminLogin.tsx";
+import AdminDashboard from "@/course/admin/pages/AdminDashboard.tsx";
 
 const Telegram = () => {
     const { user } = useTelegram();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Image, Calendar, Tag } from 'lucide-react';
-import { Post } from '@/types';
+import { Post } from '@/course/types';
 
 interface PostFormProps {
     post?: Post | null;

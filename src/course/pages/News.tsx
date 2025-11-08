@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import PostCard from '../components/Content/PostCard';
+import PostCard from '../components/Content/PostCard.tsx';
 
 const News = () => {
     const [posts, setPosts] = useState<any[]>([]);

@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import AdminLayout from '../components/AdminLayout';
-import PostManager from './PostManager';
+import AdminLayout from '../components/AdminLayout.tsx';
+import PostManager from './PostManager.tsx';
 // import UserManager from './UserManager';
 // import Analytics from './Analytics';
 import {PlusCircle} from "lucide-react";

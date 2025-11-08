@@ -1,5 +1,5 @@
-import Header from './Header';
-import BottomNavigation from './BottomNavigation';
+import Header from './Header.tsx';
+import BottomNavigation from './BottomNavigation.tsx';
 
 const Layout = ({ children, activeTab, onTabChange }: any) => {
     return (
